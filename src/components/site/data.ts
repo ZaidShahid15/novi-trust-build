@@ -25,6 +25,7 @@ export const SERVICES = [
     desc: "Protect your biggest investment. Comprehensive home coverage for Novi homeowners with personalized service and competitive rates.",
     carriers: ["Farm Bureau", "Chubb", "National General"],
     covers: ["Homeowners", "Renters", "Condo", "Landlord"],
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=70",
   },
   {
     icon: "🚗",
@@ -32,6 +33,7 @@ export const SERVICES = [
     desc: "Michigan auto insurance made simple. Multiple carrier options to find the right coverage at the right price for your family.",
     carriers: ["Farm Bureau", "Progressive", "National General", "Hagerty", "American Collectors"],
     covers: ["Personal Auto", "Multi-vehicle", "Michigan No-fault", "Classic Cars"],
+    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=70",
   },
   {
     icon: "💼",
@@ -39,6 +41,7 @@ export const SERVICES = [
     desc: "Protect your business assets with commercial coverage designed for Michigan small businesses and entrepreneurs.",
     carriers: ["Farm Bureau", "Chubb", "JM Wilson", "Jencap"],
     covers: ["General Liability", "Commercial Property", "Workers Comp", "BOP"],
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=70",
   },
   {
     icon: "🏥",
@@ -46,6 +49,7 @@ export const SERVICES = [
     desc: "Secure your family's financial future. Term and whole life options tailored to your needs and budget.",
     carriers: ["Farm Bureau"],
     covers: ["Term Life", "Whole Life", "Universal Life", "Family Planning"],
+    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=70",
   },
   {
     icon: "🚤",
@@ -53,6 +57,7 @@ export const SERVICES = [
     desc: "Boats, RVs, classic cars, and more. Specialty coverage through Hagerty, K&K, and American Collectors.",
     carriers: ["Hagerty", "K&K", "American Collectors", "American Modern"],
     covers: ["Boats", "RVs", "Classic Cars", "Event Insurance"],
+    image: "https://images.unsplash.com/photo-1530653333484-8d1d44ad1a3b?auto=format&fit=crop&w=900&q=70",
   },
   {
     icon: "🌊",
@@ -60,8 +65,13 @@ export const SERVICES = [
     desc: "Michigan flood protection through Wright Flood. Don't wait until it's too late to protect your home.",
     carriers: ["Wright Flood"],
     covers: ["National Flood Program", "Private Flood", "Risk Assessment"],
+    image: "https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=900&q=70",
   },
 ];
+
+export const AGENT_PHOTO = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80";
+export const HERO_IMAGE = "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=75";
+export const OFFICE_IMAGE = "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=75";
 
 export const REVIEWS = [
   {

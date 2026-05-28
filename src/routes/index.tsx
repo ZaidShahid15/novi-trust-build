@@ -114,13 +114,18 @@ function Home() {
           <SectionTitle eyebrow="Services" title="Coverage for Every Stage of Life" />
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s, i) => (
-              <div key={s.title} className="card-jl fade-up" style={{ animationDelay: `${i * 80}ms` }}>
-                <div className="text-4xl">{s.icon}</div>
-                <h3 className="mt-3 text-xl font-bold text-[#1B2B4B]">{s.title}</h3>
-                <p className="mt-2 text-[#6B7280] text-sm leading-relaxed">{s.desc}</p>
-                <Link to="/contact" className="mt-4 inline-flex items-center gap-1 text-[#F59E0B] font-semibold hover:gap-2 transition-all">
-                  Get A Quote <ArrowRight size={16} />
-                </Link>
+              <div key={s.title} className="card-jl fade-up overflow-hidden !p-0" style={{ animationDelay: `${i * 80}ms` }}>
+                <div className="relative h-44 overflow-hidden">
+                  <img src={s.image} alt={s.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                  <div className="absolute top-3 left-3 w-11 h-11 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-2xl shadow">{s.icon}</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#1B2B4B]">{s.title}</h3>
+                  <p className="mt-2 text-[#6B7280] text-sm leading-relaxed">{s.desc}</p>
+                  <Link to="/contact" className="mt-4 inline-flex items-center gap-1 text-[#F59E0B] font-semibold hover:gap-2 transition-all">
+                    Get A Quote <ArrowRight size={16} />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
