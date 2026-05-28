@@ -26,14 +26,15 @@ function Services() {
             return (
               <div key={s.title} className={`grid md:grid-cols-2 gap-10 items-center ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
                 <div
-                  className="rounded-2xl aspect-[5/4] flex items-center justify-center text-8xl"
+                  className="relative rounded-2xl aspect-[5/4] overflow-hidden"
                   style={{
-                    background: "linear-gradient(160deg,#F8FAFF,#E0EAFE)",
                     border: "1px solid #E5E7EB",
                     borderTop: "3px solid #F59E0B",
+                    boxShadow: "0 10px 30px rgba(27,43,75,0.12)",
                   }}
                 >
-                  <span style={{ filter: "drop-shadow(0 8px 20px rgba(27,43,75,0.15))" }}>{s.icon}</span>
+                  <img src={s.image} alt={s.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                  <div className="absolute top-4 left-4 w-14 h-14 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-3xl shadow">{s.icon}</div>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-[#F59E0B] font-bold">Service {i + 1}</p>
