@@ -126,6 +126,22 @@
     font-weight: 600;
     font-size: 14px;
   }
+  .pill-carrier {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: #FFFFFF;
+    border: 1.5px solid #1B2B4B;
+    color: #1B2B4B;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background .2s ease, color .2s ease;
+  }
+  .pill-carrier:hover {
+    background: #1B2B4B;
+    color: #FFFFFF;
+  }
 }
 
 @keyframes pulse-gold {
