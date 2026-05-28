@@ -43,33 +43,8 @@ function Home() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="relative bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-blue opacity-60" />
-        <div className="max-w-7xl mx-auto px-4 py-16 md:py-24 relative grid lg:grid-cols-5 gap-12 items-center">
-          <div className="lg:col-span-3 fade-up">
-            <span className="pill-gold">⭐ NOVI'S #1 RATED INSURANCE AGENT</span>
-            <h1 className="mt-5 text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1B2B4B] leading-[1.05]">
-              Protecting What
-              <br />
-              <span className="text-[#F59E0B]">Matters Most.</span>
-            </h1>
-            <p className="mt-6 text-lg text-[#6B7280] max-w-xl leading-relaxed">
-              Serving Novi, Michigan families and businesses with personalized insurance solutions.
-              Farm Bureau's trusted local agent with a 5-star Google reputation and access to 11 top carriers.
-            </p>
-            <p className="mt-4 text-sm text-[#1B2B4B] font-semibold">
-              Mon–Fri: 8:30 AM – 5:00 PM &nbsp;|&nbsp; Sat: By Appointment
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="btn-gold">GET A FREE QUOTE <ArrowRight size={18} /></Link>
-              <a href={`tel:${PHONE_TEL}`} className="btn-outline-navy"><Phone size={18} /> CALL {PHONE}</a>
-            </div>
-          </div>
-          <div className="lg:col-span-2 fade-up">
-            <AgentCard />
-          </div>
-        </div>
-      </section>
+      <Hero />
+
 
       {/* STATS */}
       <section className="bg-white pb-12">
