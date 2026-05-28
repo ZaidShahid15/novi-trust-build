@@ -99,9 +99,9 @@ function Home() {
               <h3 className="mt-4 text-3xl font-extrabold text-[#FCD34D]">Farm Bureau</h3>
               <p className="mt-2 text-white/80 text-sm">Michigan's trusted carrier — Jason's flagship partner.</p>
             </div>
-            <div className="lg:col-span-2 flex flex-wrap content-center gap-3">
+            <div className="lg:col-span-2 flex flex-wrap content-center gap-2.5">
               {CARRIERS.filter(c => c !== "Farm Bureau").map(c => (
-                <span key={c} className="pill-gold !text-base !py-2.5 !px-5">{c}</span>
+                <span key={c} className="pill-carrier">{c}</span>
               ))}
             </div>
           </div>
