@@ -57,7 +57,7 @@ export const SERVICES = [
     desc: "Boats, RVs, classic cars, and more. Specialty coverage through Hagerty, K&K, and American Collectors.",
     carriers: ["Hagerty", "K&K", "American Collectors", "American Modern"],
     covers: ["Boats", "RVs", "Classic Cars", "Event Insurance"],
-    image: "https://images.unsplash.com/photo-1530653333484-8d1d44ad1a3b?auto=format&fit=crop&w=900&q=70",
+    image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=900&q=70",
   },
   {
     icon: "🌊",
