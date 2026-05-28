@@ -76,8 +76,8 @@ function Contact() {
                 <div className="w-16 h-16 mx-auto rounded-full bg-[#10B981]/15 flex items-center justify-center">
                   <Check size={32} className="text-[#10B981]" />
                 </div>
-                <h3 className="mt-5 text-2xl font-bold text-[#1B2B4B]">Thank you!</h3>
-                <p className="mt-2 text-[#6B7280]">Jason will be in touch within 24 hours.</p>
+                <h3 className="mt-5 text-2xl font-bold text-[#10B981]">Thank you!</h3>
+                <p className="mt-2 text-[#10B981] font-semibold">Jason will be in touch within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={onSubmit} noValidate className="space-y-5">
