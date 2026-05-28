@@ -142,53 +142,171 @@ function FloatingCall() {
 }
 
 function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#1B2B4B] text-white">
-      <div className="max-w-7xl mx-auto px-4 py-14 space-y-10">
-        <div className="text-center">
-          <div className="inline-flex items-center gap-2.5 justify-center">
-            <span className="w-10 h-10 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">
-              <ShieldCheck className="text-[#F59E0B]" size={22} />
-            </span>
-            <span className="font-display font-extrabold text-xl">Jason Levy Agency</span>
-          </div>
-          <p className="mt-3 text-[#FCD34D] font-medium">Protecting Novi Families Since Day One</p>
+    <footer className="text-white">
+      {/* ROW 1 — Top CTA Strip */}
+      <div className="bg-[#F59E0B] text-[#1B2B4B]">
+        <div className="max-w-7xl mx-auto px-4 min-h-[70px] py-3 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
+          <p className="font-bold text-sm md:text-base">
+            ⭐ Novi's #1 Rated Insurance Agent — 5.0 Stars · 60 Google Reviews
+          </p>
+          <Link
+            to="/contact"
+            className="bg-[#1B2B4B] text-white font-bold px-6 py-2.5 rounded-md text-sm hover:bg-[#0F1E38] transition-colors whitespace-nowrap"
+          >
+            GET A FREE QUOTE
+          </Link>
         </div>
+      </div>
 
-        <nav className="flex flex-wrap justify-center gap-6 text-sm font-semibold">
-          {NAV.map((n) => (
-            <Link key={n.to} to={n.to} className="hover:text-[#FCD34D]">{n.label}</Link>
-          ))}
-        </nav>
-
-        <div>
-          <p className="text-center text-xs uppercase tracking-widest text-[#FCD34D] mb-4">Our Carriers</p>
-          <div className="flex flex-wrap justify-center gap-2">
-            {CARRIERS.map((c) => (
-              <span key={c} className="px-3 py-1.5 rounded-full border border-[#F59E0B]/60 text-[#FCD34D] text-xs font-semibold">
-                {c}
+      {/* ROW 2 — Main Footer Body */}
+      <div className="bg-[#1B2B4B]">
+        <div className="max-w-7xl mx-auto px-4 py-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Column 1 — Brand */}
+          <div>
+            <div className="flex items-center gap-2.5">
+              <ShieldCheck className="text-[#F59E0B]" size={40} />
+              <span className="font-display font-extrabold text-white text-[22px] leading-tight">
+                Jason Levy Agency
               </span>
-            ))}
+            </div>
+            <p className="mt-3 text-[#F59E0B] italic text-sm">
+              Protecting Novi Families Since Day One
+            </p>
+            <div className="mt-6 space-y-3 text-sm">
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="flex items-center gap-2 text-[#FCD34D] font-num font-bold text-lg hover:text-white transition-colors"
+              >
+                <Phone size={18} /> {PHONE}
+              </a>
+              <p className="flex items-start gap-2 text-gray-300">
+                <MapPin size={16} className="text-[#F59E0B] shrink-0 mt-0.5" />
+                <span>{ADDRESS}</span>
+              </p>
+              <p className="flex items-start gap-2 text-gray-300">
+                <Clock size={16} className="text-[#F59E0B] shrink-0 mt-0.5" />
+                <span>Mon–Fri: 8:30AM–5PM | Sat: By Appt</span>
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="grid sm:grid-cols-3 gap-6 text-sm border-t border-white/10 pt-8">
-          <a href={`tel:${PHONE_TEL}`} className="flex items-start gap-3 hover:text-[#FCD34D]">
-            <Phone className="text-[#F59E0B] shrink-0 mt-0.5" size={18} />
-            <span className="font-num font-semibold">{PHONE}</span>
-          </a>
-          <div className="flex items-start gap-3">
-            <MapPin className="text-[#F59E0B] shrink-0 mt-0.5" size={18} />
-            <span>{ADDRESS}</span>
+          {/* Column 2 — Navigate */}
+          <div>
+            <h4 className="text-[#F59E0B] uppercase text-[11px] font-bold tracking-[0.2em]">
+              Navigate
+            </h4>
+            <ul className="mt-5 space-y-2.5 text-sm">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About Jason" },
+                { to: "/services", label: "Our Services" },
+                { to: "/reviews", label: "Client Reviews" },
+                { to: "/contact", label: "Get A Quote" },
+              ].map((l) => (
+                <li key={l.to}>
+                  <Link
+                    to={l.to}
+                    className="text-white hover:text-[#F59E0B] transition-colors"
+                  >
+                    → {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="flex items-start gap-3">
-            <Clock className="text-[#F59E0B] shrink-0 mt-0.5" size={18} />
-            <span>Mon–Fri 8:30AM–5PM<br />Sat By Appt</span>
+
+          {/* Column 3 — Insurance */}
+          <div>
+            <h4 className="text-[#F59E0B] uppercase text-[11px] font-bold tracking-[0.2em]">
+              Insurance
+            </h4>
+            <ul className="mt-5 space-y-2.5 text-sm">
+              {[
+                "Home Insurance",
+                "Auto Insurance",
+                "Business Insurance",
+                "Life Insurance",
+                "Specialty Insurance",
+                "Flood Insurance",
+              ].map((l) => (
+                <li key={l}>
+                  <Link
+                    to="/services"
+                    className="text-white hover:text-[#F59E0B] transition-colors"
+                  >
+                    → {l}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4 — Trusted Agent */}
+          <div>
+            <h4 className="text-[#F59E0B] uppercase text-[11px] font-bold tracking-[0.2em]">
+              Trusted Agent
+            </h4>
+            <div className="mt-5 rounded-xl border border-[#F59E0B]/50 bg-[#0F1E38] p-4 text-center">
+              <div className="flex items-center justify-center gap-1.5">
+                <span className="text-[#F59E0B] text-lg tracking-wider">★★★★★</span>
+                <span className="font-num font-bold text-white">5.0</span>
+              </div>
+              <p className="mt-1 text-xs text-gray-300">60 Five-Star Reviews</p>
+              <a
+                href="https://g.page/r/CRjL5Y93TPmsEBM/review"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-block bg-[#1B2B4B] border border-[#F59E0B]/40 text-white text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-[#F59E0B] hover:text-[#1B2B4B] transition-colors"
+              >
+                Leave A Review
+              </a>
+            </div>
+            <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F59E0B] text-[#1B2B4B] font-bold text-xs">
+              <ShieldCheck size={14} /> Certified Trusted Advisor
+            </div>
+            <p className="mt-3 text-xs text-gray-300">University of Texas at El Paso</p>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5 text-center text-xs text-white/60">
-        © {new Date().getFullYear()} Jason Levy Agency. All Rights Reserved.
+
+      {/* ROW 3 — Carriers Strip */}
+      <div className="bg-[#0F1E38]">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <h4 className="text-[#F59E0B] uppercase text-[11px] font-bold tracking-[0.2em] text-center">
+            Our Carrier Network
+          </h4>
+          <div className="mt-5 flex flex-wrap justify-center gap-2">
+            {CARRIERS.map((c) => {
+              const primary = c === "Farm Bureau";
+              return (
+                <span
+                  key={c}
+                  className={
+                    primary
+                      ? "px-4 py-1.5 rounded-full border-2 border-[#F59E0B] text-[#FCD34D] text-sm font-bold"
+                      : "px-3 py-1 rounded-full border border-white/40 text-white text-xs font-semibold hover:border-[#F59E0B] hover:text-[#FCD34D] transition-colors"
+                  }
+                >
+                  {c}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* ROW 4 — Bottom Bar */}
+      <div className="bg-[#0A1628]">
+        <div className="max-w-7xl mx-auto px-4 min-h-[48px] py-3 flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+          <p className="text-gray-400 text-xs">
+            © {year} Jason Levy Agency. All Rights Reserved.
+          </p>
+          <p className="text-gray-400 text-xs">
+            Farm Bureau Insurance & More — Novi, Michigan
+          </p>
+        </div>
       </div>
     </footer>
   );
